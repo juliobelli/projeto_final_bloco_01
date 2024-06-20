@@ -45,7 +45,7 @@ public class Menu {
                     System.out.println("\n*****************************************************"
                             + "\n                Pesquisa por categoria               "
                             + "\n*****************************************************");
-                    System.out.print("Digite o gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
+                    System.out.println("Digite o gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
                     int genero = sc.nextInt();
                     keyPress();
                 }
@@ -65,14 +65,14 @@ public class Menu {
                     System.out.println("\n*****************************************************"
                             + "\n                  Criar um novo jogo                 "
                             + "\n*****************************************************");
-                    System.out.print("Digite o ID do jogo: ");
+                    System.out.println("\nDigite o ID do jogo: ");
                     int id = sc.nextInt();
-                    sc.nextLine();  // Consuming the newline left-over
-                    System.out.print("Digite o nome do jogo: ");
+                    sc.nextLine();
+                    System.out.println("\nDigite o nome do jogo: ");
                     String nome = sc.nextLine();
-                    System.out.print("Digite o gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
+                    System.out.println("\nDigite o gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
                     int genero = sc.nextInt();
-                    System.out.print("Digite o preço do jogo: ");
+                    System.out.println("\nDigite o preço do jogo: ");
                     float preco = sc.nextFloat();
                     Jogo novoJogo = new Jogo(id, nome, genero, preco);
                     keyPress();
@@ -81,14 +81,14 @@ public class Menu {
                     System.out.println("\n*****************************************************"
                             + "\n                 Atualizar um jogo                   "
                             + "\n*****************************************************");
-                    System.out.print("Digite o ID do jogo a ser atualizado: ");
+                    System.out.println("\nDigite o ID do jogo a ser atualizado: ");
                     int id = sc.nextInt();
-                    sc.nextLine();  // Consuming the newline left-over
-                    System.out.print("Digite o novo nome do jogo: ");
+                    sc.nextLine();
+                    System.out.println("Digite o novo nome do jogo: ");
                     String nome = sc.nextLine();
-                    System.out.print("Digite o novo gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
+                    System.out.println("\nDigite o novo gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
                     int genero = sc.nextInt();
-                    System.out.print("Digite o novo preço do jogo: ");
+                    System.out.println("\nDigite o novo preço do jogo: ");
                     float preco = sc.nextFloat();
                     keyPress();
                 }
@@ -96,7 +96,7 @@ public class Menu {
                     System.out.println("\n*****************************************************"
                             + "\n                   Deletar um jogo                   "
                             + "\n*****************************************************");
-                    System.out.print("Digite o ID do jogo a ser deletado: ");
+                    System.out.println("\nDigite o ID do jogo a ser deletado: ");
                     int id = sc.nextInt();
                     keyPress()    
                 }
