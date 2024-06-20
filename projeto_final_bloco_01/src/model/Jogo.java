@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Jogo {
+public class Jogo {
     private int id;
     private String nome;
     private int genero;
@@ -64,5 +64,16 @@ public abstract class Jogo {
                 + "\nGênero: " + genero
                 + "\nSaldo: " + this.preco
         );
+    }
+    public static class JogoNaoEncontradoException extends Exception{
+        public JogoNaoEncontradoException(String mensagem) {
+            super(mensagem);
+        }
+    }
+
+    public static class CarrinhoVazioException extends Exception {
+        public CarrinhoVazioException(String mensagem) {
+            super(mensagem);
+        }
     }
 }

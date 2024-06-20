@@ -1,8 +1,14 @@
+import model.Jogo;
+import controller.JogoController;
+
 import java.io.IOException;
 import java.util.*;
 
 public class Menu {
+    private static JogoController jogoController = new JogoController();
+
     public static void main(String[] args) {
+
 
         Scanner sc = new Scanner(System.in);
         int op;
@@ -39,24 +45,89 @@ public class Menu {
                     System.out.println("\n*****************************************************"
                             + "\n                    Todos os jogos                   "
                             + "\n*****************************************************");
+                    jogoController.listarTodosJogos();
                     keyPress();
                 }
                 case 2 -> {
                     System.out.println("\n*****************************************************"
                             + "\n                Pesquisa por categoria               "
                             + "\n*****************************************************");
+                    System.out.println("Digite o gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
+                    int genero = sc.nextInt();
+                    jogoController.pesquisarGenero(genero);
                     keyPress();
                 }
                 case 3 -> {
                     System.out.println("\n*****************************************************"
                             + "\n                Adicionar ao carrinho                "
                             + "\n*****************************************************");
+                    try {
+                        jogoController.adicionarCarrinho();
+                    } catch (Jogo.JogoNaoEncontradoException e) {
+                        System.out.println(e.getMessage());
+                    }
                     keyPress();
                 }
                 case 4 -> {
                     System.out.println("\n*****************************************************"
                             + "\n                 Visualizar carrinho                 "
                             + "\n*****************************************************");
+                    try {
+                        jogoController.visualizarCarrinho();
+                    } catch (Jogo.CarrinhoVazioException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    keyPress();
+                }
+                case 5 -> {
+                    System.out.println("\n*****************************************************"
+                            + "\n                  Criar um novo jogo                 "
+                            + "\n*****************************************************");
+                    System.out.println("\nDigite o ID do jogo: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("\nDigite o nome do jogo: ");
+                    String nome = sc.nextLine();
+                    System.out.println("\nDigite o gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
+                    int genero = sc.nextInt();
+                    System.out.println("\nDigite o preço do jogo: ");
+                    float preco = sc.nextFloat();
+                    Jogo novoJogo = new Jogo(id, nome, genero, preco);
+                    jogoController.criarJogo(novoJogo);
+                    keyPress();
+                }
+                case 6 -> {
+                    System.out.println("\n*****************************************************"
+                            + "\n                 Atualizar um jogo                   "
+                            + "\n*****************************************************");
+                    System.out.println("\nDigite o ID do jogo a ser atualizado: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("\nDigite o novo nome do jogo: ");
+                    String nome = sc.nextLine();
+                    System.out.println("\nDigite o novo gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
+                    int genero = sc.nextInt();
+                    System.out.println("\nDigite o novo preço do jogo: ");
+                    float preco = sc.nextFloat();
+                    Jogo jogoAtualizado = new Jogo(id, nome, genero, preco);
+                    try {
+                        jogoController.atualizarJogo(id, jogoAtualizado);
+                    } catch (Jogo.JogoNaoEncontradoException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    keyPress();
+                }
+                case 7 -> {
+                    System.out.println("\n*****************************************************"
+                            + "\n                   Deletar um jogo                   "
+                            + "\n*****************************************************");
+                    System.out.println("\nDigite o ID do jogo a ser deletado: ");
+                    int id = sc.nextInt();
+                    try {
+                        jogoController.deletarJogo(id);
+                    } catch (Jogo.JogoNaoEncontradoException e) {
+                        System.out.println(e.getMessage());
+                    }
                     keyPress();
                 }
                 default -> {
