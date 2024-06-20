@@ -97,7 +97,7 @@ public class Menu {
                             + "\n*****************************************************");
                     System.out.println("\nDigite o ID do jogo a ser deletado: ");
                     int id = sc.nextInt();
-                    keyPress()    
+                    keyPress(); 
                 }
                 default -> {
                     System.out.println("\nOpção inválida!\n");
