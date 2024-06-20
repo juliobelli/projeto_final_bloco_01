@@ -84,7 +84,7 @@ public class Menu {
                     System.out.println("\nDigite o ID do jogo a ser atualizado: ");
                     int id = sc.nextInt();
                     sc.nextLine();
-                    System.out.println("Digite o novo nome do jogo: ");
+                    System.out.println("\nDigite o novo nome do jogo: ");
                     String nome = sc.nextLine();
                     System.out.println("\nDigite o novo gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
                     int genero = sc.nextInt();
