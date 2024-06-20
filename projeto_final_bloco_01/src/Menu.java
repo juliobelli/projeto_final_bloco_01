@@ -9,23 +9,26 @@ public class Menu {
 
         while(true){
             System.out.println("\n*****************************************************"
-                            + "\n                                                     "
-                            + "\n                       PLAYHUB                       "
-                            + "\n                                                     "
-                            + "\n*****************************************************"
-                            + "\n                                                     "
-                            + "\n            1 - Visualizar todos os jogos            "
-                            + "\n            2 - Pesquisar por categoria              "
-                            + "\n            3 - Adicionar jogo ao carrinho           "
-                            + "\n            4 - Visualizar carrinho                  "
-                            + "\n            5 - Sair                         "
-                            + "\n                                                     "
-                            + "\n*****************************************************"
-                            + "\nEntre com a opção desejada:                          "
-                            + "\n                                                     ");
+                    + "\n                                                     "
+                    + "\n                       PLAYHUB                       "
+                    + "\n                                                     "
+                    + "\n*****************************************************"
+                    + "\n                                                     "
+                    + "\n            1 - Listar todos os jogos                "
+                    + "\n            2 - Pesquisar por categoria              "
+                    + "\n            3 - Adicionar jogo ao carrinho           "
+                    + "\n            4 - Visualizar carrinho                  "
+                    + "\n            5 - Criar um novo jogo                   "
+                    + "\n            6 - Atualizar um jogo                    "
+                    + "\n            7 - Deletar um jogo                      "
+                    + "\n            8 - Sair                                 "
+                    + "\n                                                     "
+                    + "\n*****************************************************"
+                    + "\nEntre com a opção desejada:                          "
+                    + "\n                                                     ");
             op = sc.nextInt();
 
-            if(op == 5){
+            if(op == 8){
                 System.out.println("Finalizando o programa...");
                 sobre();
                 System.exit(0);
