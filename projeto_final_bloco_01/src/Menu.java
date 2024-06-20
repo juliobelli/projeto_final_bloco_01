@@ -18,7 +18,7 @@ public class Menu {
                             + "\n            2 - Pesquisar por categoria              "
                             + "\n            3 - Adicionar jogo ao carrinho           "
                             + "\n            4 - Visualizar carrinho                  "
-                            + "\n            5 - Sair                         "
+                            + "\n            5 - Sair                                 "
                             + "\n                                                     "
                             + "\n*****************************************************"
                             + "\nEntre com a opção desejada:                          "
