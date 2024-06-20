@@ -74,7 +74,6 @@ public class Menu {
                     int genero = sc.nextInt();
                     System.out.println("\nDigite o preço do jogo: ");
                     float preco = sc.nextFloat();
-                    Jogo novoJogo = new Jogo(id, nome, genero, preco);
                     keyPress();
                 }
                 case 6 -> {
