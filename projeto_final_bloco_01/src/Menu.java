@@ -39,14 +39,14 @@ public class Menu {
                     System.out.println("\n*****************************************************"
                             + "\n                    Todos os jogos                   "
                             + "\n*****************************************************");
-                    System.out.print("Digite o gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
-                    int genero = sc.nextInt();
                     keyPress();
                 }
                 case 2 -> {
                     System.out.println("\n*****************************************************"
                             + "\n                Pesquisa por categoria               "
                             + "\n*****************************************************");
+                    System.out.print("Digite o gênero (1-Aventura, 2-Plataforma, 3-Sandbox, 4-RPG, 5-Esportes): ");
+                    int genero = sc.nextInt();
                     keyPress();
                 }
                 case 3 -> {
